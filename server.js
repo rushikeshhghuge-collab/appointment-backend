@@ -15,7 +15,10 @@ const app = express();
 
 app.use(
   cors({
-    origin: process.env.CLIENT_URL || "*",
+    origin: [
+      "https://appointment-frontend-five.vercel.app",
+      "http://localhost:5173",
+    ],
     credentials: true,
   }),
 );
